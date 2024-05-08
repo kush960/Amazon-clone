@@ -43,7 +43,7 @@ const Footer = () => {
     <div className="footer-bottom">
       <img src={logo} className="footer-logo" />
       <div className="footer-bottom-two">
-        <h6>Build By Abhishek Kushwah</h6>
+        <h6>Build By Kushagra Ankit</h6>
       </div>
     </div>
   </div>
