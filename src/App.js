@@ -14,41 +14,41 @@ import { Elements } from "@stripe/react-stripe-js";
 import Orders from "./Components/Orders";
 
 //test key
-const promise = loadStripe(process.env.REACT_APP_STRIPE_TEST_KEY);
+// const promise = loadStripe(process.env.REACT_APP_STRIPE_TEST_KEY);
 
 function App() {
   const [{ user }, dispatch] = useStateValue();
 
   //UseEffect <<<<<<<<<<<<<<POWERFUL
   //Piece of code which runs based on given codition (it is listener)
-  useEffect(() => {
-    const unsubscribe = auth.onAuthStateChanged((authUser) => {
-      if (authUser) {
+  // useEffect(() => {
+    // const unsubscribe = auth.onAuthStateChanged((authUser) => {
+      // if (authUser) {
         //the user is logged in...
 
-        dispatch({
-          type: "SET_USER",
-          user: authUser,
-        })
+        // dispatch({
+          // type: "SET_USER",
+          // user: authUser,
+        // })
 
-      } else {
+      // } else {
         //the user is logged out
 
-        dispatch({
-          type: "SET_USER",
-          user: null,
-        })
+//        dispatch({
+  //        type: "SET_USER",
+    //      user: null,
+      //  })
 
-      }
-    });
+//      }
+  //  });
 
-    return () => {
+   // return () => {
       //Any cleanup operration go in here..
-      unsubscribe();
-    };
+     // unsubscribe();
+   // };
 
 
-  }, [])
+//  }, [])
 
 
   return (
@@ -68,9 +68,9 @@ function App() {
           </Route>
           <Route path="/payment">
             <Header />
-            <Elements stripe={promise}>
+           {/* <Elements stripe={promise}>
               <Payment />
-            </Elements>
+            </Elements> */}
           </Route>
           <Route path="/orders">
             <Header />
